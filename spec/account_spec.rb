@@ -21,11 +21,6 @@ describe Account do
        expect(account.get_balance).to eq Account::STARTING_BALANCE
     end
 
-    it 'stores the information of the transaction' do
-        account.deposit(Account::EXAMPLE_AMOUNT)
-        expect(account.transactions).to eq(:amount=>1, :balance=>1, :date=>1, :type=>1)
-    end
-
     it 'holds an instance of account memory' do
         expect(account.account_memory).to eq (account_memory_double)
     end
