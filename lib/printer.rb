@@ -4,8 +4,11 @@ class Printer
         return "date || credit || debit || balance"
     end
 
-    def print_statement
-        return 'a statement'
+    def print_statement(transactions)
+        print_statement_header
+        transactions.map do |key, value|
+            value
+        end
     end
     
 end

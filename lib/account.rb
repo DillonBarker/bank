@@ -1,4 +1,4 @@
-require 'account_memory'
+require_relative 'account_memory'
 
 class Account
 
@@ -20,6 +20,11 @@ class Account
     def withdraw(amount)
         @balance -= amount
         @account_memory.save_debit_transaction(amount, @balance)
+    end
+
+    def print
+        @account_memory.transactions = data
+        @account_memory.printer.print_statement(data)
     end
 
     def get_balance
