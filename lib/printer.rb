@@ -12,6 +12,7 @@ class Printer
                 "#{transaction[:date]}  ||  || #{transaction[:amount]} ||  #{transaction[:balance]}"
             end
         end
+        print print_statement_header + "\n" + statement.join("\n")
         print_statement_header + "\n" + statement.join("\n")
     end
     
