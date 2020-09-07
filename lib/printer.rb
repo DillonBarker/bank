@@ -7,7 +7,11 @@ class Printer
     def print_statement(transactions)
         print_statement_header
         statement = transactions.map do |transaction|
-            "#{transaction[:date]}  ||  #{transaction[:amount]}  ||  ||  #{transaction[:balance]}"
+            if transaction[:type] = 'credit'
+                "#{transaction[:date]}  ||  #{transaction[:amount]}  ||  ||  #{transaction[:balance]}"
+            else 
+                "#{transaction[:date]}  ||  || #{transaction[:amount]} ||  #{transaction[:balance]}"
+            end
         end
         print_statement_header + "\n" + statement.join
     end
