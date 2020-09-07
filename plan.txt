@@ -2,10 +2,18 @@ Outline:
 - Needs deposit, withdrawal and a statement print
 - Data is kept in memory, no db
 
-Classes:
-- Printer { methods: print_statement }
-- Account { methods: deposit, withdraw, get_balance attributes: balance }
+Initial plan:
+    Classes:
+    - Printer { methods: print_statement }
+    - Account { methods: deposit, withdraw, get_balance attributes: balance }
 
 Notes:
 - changed print_statement to print_statement_header, so that it is more simple.
-- 
+
+Updated plan:
+    Classes:
+    - Printer { methods: print_statement, print_statement_header }
+    - Account { methods: deposit, withdraw, get_balance attributes: balance }
+    - Transaction { methods: credit, debit } ? -> Here I want some way of getting either a credit
+    or debit transaction type which I can input into the statement alongside the amount of that type
+    and the balance at the end.
