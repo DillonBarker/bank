@@ -1,5 +1,3 @@
-require_relative 'account_memory'
-
 class Account
 
     STARTING_BALANCE = 0
@@ -32,4 +30,5 @@ class Account
     def get_balance
         @balance
     end
+    
 end
