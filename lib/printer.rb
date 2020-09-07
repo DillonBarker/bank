@@ -5,8 +5,7 @@ class Printer
     end
 
     def print_statement
-        return print_statement_header + " \n " +
-        " || " + " || " + " || "
+        return print_statement_header + " \n " + " || " + " || " + " || "
     end
     
 end
