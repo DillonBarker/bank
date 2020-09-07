@@ -1,0 +1,8 @@
+Outline:
+- Needs deposit, withdrawal and a statement print
+- Data is kept in memory, no db
+
+Classes:
+- Printer { methods: print_statement }
+- Account { methods: deposit, withdraw, get_balance attributes: balance }
+
