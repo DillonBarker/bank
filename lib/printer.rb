@@ -6,11 +6,8 @@ class Printer
 
     def print_statement(transactions)
         print_statement_header
-        transactions[1..-1].map do |transaction|
-                "#{date} + " || " + #{amount} + " || " + " || " + #{balance}"
-            else
-                "#{date} + " || " + " || " + #{amount} + " || " + #{balance}"
-            end
+        transactions.map do |transaction|
+            return "#{transaction[:date]}  ||  #{transaction[:amount]}  ||  ||  #{transaction[:balance]}"
         end
     end
     
