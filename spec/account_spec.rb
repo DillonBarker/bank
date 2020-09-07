@@ -19,4 +19,10 @@ describe Account do
        expect{ account.withdraw(Account::EXAMPLE_AMOUNT) }.to change{ account.get_balance }.by -Account::EXAMPLE_AMOUNT
        expect(account.get_balance).to eq Account::STARTING_BALANCE
     end
+
+    it 'stores the information of the transaction' do
+        account.deposit(Account::EXAMPLE_AMOUNT)
+        expect(account.transactions).to eq(:amount=>1, :balance=>1, :date=>1, :type=>1)
+
+    end
 end
