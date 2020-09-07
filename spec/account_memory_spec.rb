@@ -14,4 +14,15 @@ describe AccountMemory do
         expect(account_memory.transaction).to eq(date: time_now, type: 'credit', amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT)
     end
 
+    it 'saves a transaction with date, type, amount and balance into a hash' do
+        account_memory.save_debit_transaction(100, -100)
+        expect(account_memory.transaction).to eq(date: time_now, type: 'credit', amount: Account::EXAMPLE_AMOUNT, balance: -Account::EXAMPLE_AMOUNT)
+    end
+
+    it 'can save multiple transactions to the transactions array' do
+        account_memory.save_credit_transaction(100, 100)
+        account_memory.save_credit_transaction(100, 100)
+        expect(account_memory.transactions).to eq([ { date: time_now, type: 'credit', amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT }, { date: time_now, type: 'credit', amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT } ])
+    end
+
 end

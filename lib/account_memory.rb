@@ -1,6 +1,6 @@
 class AccountMemory
 
-    attr_reader :transaction
+    attr_reader :transaction, :transactions
 
     def initialize
         @transaction = {}
@@ -12,6 +12,7 @@ class AccountMemory
         @transaction[:type] = 'credit'
         @transaction[:amount] = amount
         @transaction[:balance] = balance
+        save_to_transactions(@transaction)
     end
 
     def save_debit_transaction(amount, balance)
@@ -19,5 +20,11 @@ class AccountMemory
         @transaction[:type] = 'credit'
         @transaction[:amount] = amount
         @transaction[:balance] = balance
+        save_to_transactions(@transaction)
     end
+
+    def save_to_transactions(transaction)
+        @transactions << transaction
+    end
+
 end
