@@ -1,11 +1,14 @@
+require 'account_memory'
+
 class Account
 
     STARTING_BALANCE = 0
     EXAMPLE_AMOUNT = 100
 
-    attr_reader :balance, :transactions
+    attr_reader :balance, :transactions, :account_memory
 
-    def initialize
+    def initialize(account_memory = AccountMemory.new)
+        @account_memory = account_memory
         @balance = STARTING_BALANCE
         @transactions = {}
     end
