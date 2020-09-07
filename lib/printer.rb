@@ -5,8 +5,9 @@ class Printer
     end
 
     def print_statement
+        time = Time.now.strftime("%d/%m/%Y")
         return print_statement_header + " \n " +
-        "01/01/2020"
+        time
     end
     
 end
