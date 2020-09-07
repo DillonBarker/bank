@@ -7,5 +7,5 @@ describe AccountMemory do
     it 'initializes with an empty hash attribute' do
         expect(account_memory.transactions).to eq ({})
     end
-    
+
 end

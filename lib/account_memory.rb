@@ -6,4 +6,6 @@ class AccountMemory
         @transactions = {}
     end
 
+    
+
 end

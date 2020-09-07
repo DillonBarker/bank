@@ -14,19 +14,19 @@ class Account
 
     def deposit(amount)
         @balance += amount
-        save_credit_transaction
+        save_credit_transaction(amount)
     end
     
     def withdraw(amount)
         @balance -= amount
-        save_debit_transaction
+        save_debit_transaction(amount)
     end
 
-    def save_credit_transaction
+    def save_credit_transaction(amount)
         @account_memory.transactions[:date] = Time.now.strftime("%d/%m/%Y")
     end
 
-    def save_debit_transaction
+    def save_debit_transaction(amount)
         @account_memory.transactions[:date] = Time.now.strftime("%d/%m/%Y")
     end
 
