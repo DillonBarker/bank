@@ -24,6 +24,9 @@ class Account
 
     def save_credit_transaction(amount)
         @account_memory.transactions[:date] = Time.now.strftime("%d/%m/%Y")
+        @account_memory.transactions[:type] = 'credit'
+        @account_memory.transactions[:amount] = amount
+        @account_memory.transactions[:balance] = @balance
     end
 
     def save_debit_transaction(amount)

@@ -31,6 +31,6 @@ describe Account do
     it 'can store a the date when a transaction is made.' do
         allow(account_memory_double).to receive(:transactions).and_return({})
         account.deposit(Account::EXAMPLE_AMOUNT)
-        expect(account.account_memory.transactions).to eq(date: time_now)
+        expect(account.account_memory.transactions).to eq(date: time_now, type: 'credit', amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT)
     end
 end
