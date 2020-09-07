@@ -9,7 +9,7 @@ describe Printer do
     end
 
     it 'prints a statement' do
-        expect(printer.print_statement([{date: time_now, type: 'credit', amount: 100, balance: 100 }])).to eq("07/09/2020  ||  100  ||  ||  100")
+        expect(printer.print_statement([{date: time_now, type: 'credit', amount: 100, balance: 100 }])).to eq("date || credit || debit || balance\n07/09/2020  ||  100  ||  ||  100")
     end
 
 end
