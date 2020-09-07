@@ -1,6 +1,7 @@
 class Account
 
     STARTING_BALANCE = 0
+    EXAMPLE_AMOUNT = 100
 
     attr_reader :balance
 
