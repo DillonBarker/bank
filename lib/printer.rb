@@ -6,9 +6,9 @@ class Printer
 
     def print_statement(transactions)
         statement = transactions.map do |transaction|
-            if transaction[:type] == 'credit'
+            if transaction[:type] == true
                 "#{transaction[:date]}  ||  #{transaction[:amount]}  ||  ||  #{transaction[:balance]}"
-            else transaction[:type] == 'debit'
+            else transaction[:type] == false
                 "#{transaction[:date]}  ||  || #{transaction[:amount]} ||  #{transaction[:balance]}"
             end
         end

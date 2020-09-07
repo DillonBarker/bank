@@ -10,7 +10,7 @@ class AccountMemory
 
     def save_credit_transaction(amount, balance)
         @transaction[:date] = Time.now.strftime("%d/%m/%Y")
-        @transaction[:type] = 'credit'
+        @transaction[:type] = true
         @transaction[:amount] = amount
         @transaction[:balance] = balance
         save_to_transactions(@transaction)
@@ -19,7 +19,7 @@ class AccountMemory
 
     def save_debit_transaction(amount, balance)
         @transaction[:date] = Time.now.strftime("%d/%m/%Y")
-        @transaction[:type] = 'credit'
+        @transaction[:type] = false
         @transaction[:amount] = amount
         @transaction[:balance] = balance
         save_to_transactions(@transaction)
