@@ -4,6 +4,7 @@ describe Account do
     let(:account_memory_double) { instance_double(AccountMemory)}
     let(:account) { Account.new(account_memory_double) }
     let(:time_now) { Time.now.strftime("%d/%m/%Y") }
+    let(:data) { {date: time_now, type: true, amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT} }
 
     it 'can return the balance of that account ( 0 ), using a method' do
         expect(account.get_balance).to eq Account::STARTING_BALANCE
