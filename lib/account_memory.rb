@@ -14,6 +14,7 @@ class AccountMemory
         @transaction[:amount] = amount
         @transaction[:balance] = balance
         save_to_transactions(@transaction)
+        @transaction = {}
     end
 
     def save_debit_transaction(amount, balance)
@@ -22,6 +23,7 @@ class AccountMemory
         @transaction[:amount] = amount
         @transaction[:balance] = balance
         save_to_transactions(@transaction)
+        @transaction = {}
     end
 
     def save_to_transactions(transaction)

@@ -14,16 +14,18 @@ class Account
 
     def deposit(amount)
         @balance += amount
-        @account_memory.save_credit_transaction(amount, @balance)
+        balance = @balance
+        @account_memory.save_credit_transaction(amount, balance)
     end
     
     def withdraw(amount)
         @balance -= amount
-        @account_memory.save_debit_transaction(amount, @balance)
+        balance = @balance
+        @account_memory.save_debit_transaction(amount, balance)
     end
 
     def print
-        @account_memory.transactions = data
+        data = @account_memory.transactions 
         @account_memory.printer.print_statement(data)
     end
 

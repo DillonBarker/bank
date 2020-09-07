@@ -12,4 +12,9 @@ describe Printer do
         expect(printer.print_statement([{date: time_now, type: 'credit', amount: 100, balance: 100 }])).to eq("date || credit || debit || balance\n07/09/2020  ||  100  ||  ||  100")
     end
 
+    it 'can print a statement with multiple transactions' do
+        expect(printer.print_statement([{date: time_now, type: 'credit', amount: 100, balance: 100 },{date: time_now, type: 'credit', amount: 100, balance: 100 }])).to eq("date || credit || debit || balance\n07/09/2020  ||  100  ||  ||  100\n07/09/2020  ||  100  ||  ||  100")
+
+    end
+
 end
