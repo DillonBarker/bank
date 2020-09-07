@@ -5,7 +5,7 @@ class Printer
     end
 
     def print_statement
-        
+        return 'a statement'
     end
     
 end

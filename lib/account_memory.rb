@@ -2,7 +2,8 @@ class AccountMemory
 
     attr_reader :transaction, :transactions
 
-    def initialize
+    def initialize(printer = Printer.new)
+        @printer = printer
         @transaction = {}
         @transactions = []
     end

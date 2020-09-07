@@ -7,6 +7,8 @@ describe Printer do
         expect(printer.print_statement_header).to eq("date || credit || debit || balance")
     end
 
-   
+    it 'prints a statement' do
+        expect(printer.print_statement).to eq('a statement')
+    end
 
 end
