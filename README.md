@@ -38,3 +38,5 @@ date || credit || debit || balance
 * Then I moved onto the Account class which would just need a add and subtract method from the balance, then some way of storing this information -> I went with a new class AccountMemory to store the transactions in
 * Finally, I moved back to the Printer where I added a new method whereby the stored data could be made into a statement when Account.print was called.
 
+## Image of use in IRB
+![irb image](images/irb.png)
