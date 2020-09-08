@@ -1,5 +1,4 @@
 class AccountMemory
-
     attr_reader :transaction, :transactions, :printer
 
     def initialize(printer = Printer.new)
@@ -9,7 +8,7 @@ class AccountMemory
     end
 
     def save_credit_transaction(amount, balance)
-        @transaction[:date] = Time.now.strftime("%d/%m/%Y")
+        @transaction[:date] = Time.now.strftime('%d/%m/%Y')
         @transaction[:type] = true
         @transaction[:amount] = amount
         @transaction[:balance] = balance
@@ -18,7 +17,7 @@ class AccountMemory
     end
 
     def save_debit_transaction(amount, balance)
-        @transaction[:date] = Time.now.strftime("%d/%m/%Y")
+        @transaction[:date] = Time.now.strftime('%d/%m/%Y')
         @transaction[:type] = false
         @transaction[:amount] = amount
         @transaction[:balance] = balance
@@ -29,5 +28,4 @@ class AccountMemory
     def save_to_transactions(transaction)
         @transactions << transaction
     end
-
 end

@@ -1,0 +1,6 @@
+Layout/IndentationWidth:
+  Enabled: False
+Style/BlockComments:
+  Enabled: False
+Style/FrozenStringLiteralComment:
+  Enabled: False 

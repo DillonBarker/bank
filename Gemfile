@@ -11,4 +11,3 @@ gem 'simplecov-console'
 group :test do
     gem 'rspec'
 end
-

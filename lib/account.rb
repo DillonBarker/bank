@@ -1,5 +1,4 @@
 class Account
-
     STARTING_BALANCE = 0
     EXAMPLE_AMOUNT = 100
 
@@ -15,7 +14,7 @@ class Account
         balance = @balance
         @account_memory.save_credit_transaction(amount, balance)
     end
-    
+
     def withdraw(amount)
         @balance -= amount
         balance = @balance
@@ -23,12 +22,11 @@ class Account
     end
 
     def print
-        data = @account_memory.transactions 
+        data = @account_memory.transactions
         @account_memory.printer.print_statement(data)
     end
 
     def get_balance
         @balance
     end
-    
 end
