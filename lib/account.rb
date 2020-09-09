@@ -26,7 +26,4 @@ class Account
         @account_memory.printer.print_statement(data)
     end
 
-    def get_balance
-        @balance
-    end
 end
