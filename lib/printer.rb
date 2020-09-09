@@ -1,4 +1,5 @@
 class Printer
+
     def print_statement_header
         'date || credit || debit || balance'
     end
@@ -14,4 +15,5 @@ class Printer
         print print_statement_header + "\n" + statement.reverse.join("\n")
         print_statement_header + "\n" + statement.reverse.join("\n")
     end
+    
 end
