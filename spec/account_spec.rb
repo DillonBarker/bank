@@ -3,7 +3,6 @@ require 'account'
 describe Account do
     let(:account_memory_double) { instance_double(AccountMemory) }
     let(:account) { Account.new(account_memory_double) }
-    let(:data) { {date: "10/10/2020", type: true, amount: Account::EXAMPLE_AMOUNT, balance: Account::EXAMPLE_AMOUNT} }
 
     it 'can return the balance of that account ( 0 ), using a method' do
         expect(account.balance).to eq Account::STARTING_BALANCE
